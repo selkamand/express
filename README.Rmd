@@ -36,8 +36,6 @@ remotes::install_github('selkamand/express')
 
 ## Quick Start
 
-This is a basic example which shows you how to solve a common problem:
-
 ```{r, eval=FALSE}
 library(express)
 
