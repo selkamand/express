@@ -1,0 +1,3 @@
+name	type	description	url
+GBM	tsne	mRNA expression t-SNE from the pancanatlas glioblastoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/gbm_tsne.csv
+BRCA	tsne	mRNA expression t-SNE from the pancanatlas breast carcinoma cohort	

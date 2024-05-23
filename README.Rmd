@@ -66,3 +66,24 @@ express_sample_relatedness(
   colour_by = "Disease"
 )
 ```
+
+
+## Accessing Precomputed Public Analyses
+
+express can also visualise the results from precomputed analyses hosted on GitHub. 
+
+For example to see a t-SNE of TCGA BRCA
+
+```{r}
+express_precomputed_tsne("GBM")
+```
+
+
+To see all precomputed datasets available
+
+```{r}
+express_available_datasets()
+```
+
+
+
