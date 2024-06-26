@@ -35,7 +35,7 @@ express_available_datasets <- function(){
 #'
 #' # Retrieve only the t-SNE data without plotting
 #' data <- express_precomputed_tsne("example_dataset", just_return_data = TRUE)
-express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_data = FALSE){
+express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_data = FALSE, title = paste0(dataset, " t-SNE (expression)")){
 
   # Assertions
   assertions::assert_string(dataset)
@@ -62,10 +62,13 @@ express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_d
     ggiraph::geom_point_interactive(ggplot2::aes(data_id = Sample, tooltip = Sample)) +
     ggplot2::theme_bw() +
     ggplot2::xlab("Dimension 1") +
-    ggplot2::ylab("Dimension 1") +
-    ggplot2::ggtitle(paste0(dataset, " Expression t-SNE")) +
+    ggplot2::ylab("Dimension 2") +
+    ggplot2::ggtitle(title) +
     ggplot2::theme(
-      axis.text = ggplot2::element_blank(), axis.ticks = ggplot2::element_blank(), panel.grid = ggplot2::element_blank()
+      axis.text = ggplot2::element_blank(),
+      axis.ticks = ggplot2::element_blank(),
+      panel.grid = ggplot2::element_blank(),
+      plot.title = ggplot2::element_text(hjust = 0.5, face = "bold")
       )
 
     if (interactive) {
@@ -77,7 +80,8 @@ express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_d
 }
 
 read_from_url <- function(url){
-  data = data.table::fread(url)
+  #data = data.table::fread(url)
+  data = read.csv(url)
   return(data)
 }
 

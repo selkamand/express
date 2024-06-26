@@ -22,7 +22,13 @@ knitr::opts_chunk$set(
 
 Warning: this repo is in very early development and not yet ready for use yet.
 
-The goal of express is to simplify exploration of tabular, gene-level expression datasets 
+The goal of express is to simplify exploration of tabular, gene-level expression datasets.
+
+To analyse your own data, you need a data.frame with 3 columns
+
+1. *sample*: a sample identifier
+2. *gene*: a gene identifier
+3. *expression*: a quantitative value representing expression of that has been normalised so is comparable across samples (e.g. TPM).
 
 
 ## Installation
@@ -75,7 +81,8 @@ express can also visualise the results from precomputed analyses hosted on GitHu
 For example to see a t-SNE of TCGA BRCA
 
 ```{r}
-express_precomputed_tsne("GBM")
+library(express)
+express_precomputed_tsne("BRCA")
 ```
 
 
