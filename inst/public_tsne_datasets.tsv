@@ -1,33 +1,34 @@
 name	type	description	url
-ACC	tsne	mRNA expression t-SNE from the pancanatlas adrenocortical cancer cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/ACC_tsne.csv
-BLCA	tsne	mRNA expression t-SNE from the pancanatlas bladder urothelial carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/BLCA_tsne.csv
-BRCA	tsne	mRNA expression t-SNE from the pancanatlas breast invasive carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/BRCA_tsne.csv
-CESC	tsne	mRNA expression t-SNE from the pancanatlas cervical & endocervical cancer cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/CESC_tsne.csv
-CHOL	tsne	mRNA expression t-SNE from the pancanatlas cholangiocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/CHOL_tsne.csv
-COAD	tsne	mRNA expression t-SNE from the pancanatlas colon adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/COAD_tsne.csv
-DLBC	tsne	mRNA expression t-SNE from the pancanatlas diffuse large B-cell lymphoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/DLBC_tsne.csv
-ESCA	tsne	mRNA expression t-SNE from the pancanatlas esophageal carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/ESCA_tsne.csv
-HNSC	tsne	mRNA expression t-SNE from the pancanatlas head & neck squamous cell carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/HNSC_tsne.csv
-KICH	tsne	mRNA expression t-SNE from the pancanatlas kidney chromophobe cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KICH_tsne.csv
-KIRC	tsne	mRNA expression t-SNE from the pancanatlas kidney clear cell carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRC_tsne.csv
-KIRP	tsne	mRNA expression t-SNE from the pancanatlas kidney papillary cell carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRP_tsne.csv
-LAML	tsne	mRNA expression t-SNE from the pancanatlas acute myeloid leukemia cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LAML_tsne.csv
-LGG	tsne	mRNA expression t-SNE from the pancanatlas brain lower grade glioma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LGG_tsne.csv
-LIHC	tsne	mRNA expression t-SNE from the pancanatlas liver hepatocellular carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LIHC_tsne.csv
-LUAD	tsne	mRNA expression t-SNE from the pancanatlas lung adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LUAD_tsne.csv
-LUSC	tsne	mRNA expression t-SNE from the pancanatlas lung squamous cell carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LUSC_tsne.csv
-MESO	tsne	mRNA expression t-SNE from the pancanatlas mesothelioma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/MESO_tsne.csv
-OV	tsne	mRNA expression t-SNE from the pancanatlas ovarian serous cystadenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/OV_tsne.csv
-PAAD	tsne	mRNA expression t-SNE from the pancanatlas pancreatic adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PAAD_tsne.csv
-PCPG	tsne	mRNA expression t-SNE from the pancanatlas pheochromocytoma & paraganglioma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PCPG_tsne.csv
-PRAD	tsne	mRNA expression t-SNE from the pancanatlas prostate adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PRAD_tsne.csv
-READ	tsne	mRNA expression t-SNE from the pancanatlas rectum adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/READ_tsne.csv
-SARC	tsne	mRNA expression t-SNE from the pancanatlas sarcoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/SARC_tsne.csv
-SKCM	tsne	mRNA expression t-SNE from the pancanatlas skin cutaneous melanoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/SKCM_tsne.csv
-STAD	tsne	mRNA expression t-SNE from the pancanatlas stomach adenocarcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/STAD_tsne.csv
-TGCT	tsne	mRNA expression t-SNE from the pancanatlas testicular germ cell tumor cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/TGCT_tsne.csv
-THCA	tsne	mRNA expression t-SNE from the pancanatlas thyroid carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/THCA_tsne.csv
-THYM	tsne	mRNA expression t-SNE from the pancanatlas thymoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/THYM_tsne.csv
-UCEC	tsne	mRNA expression t-SNE from the pancanatlas uterine corpus endometrioid carcinoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UCEC_tsne.csv
-UCS	tsne	mRNA expression t-SNE from the pancanatlas uterine carcinosarcoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UCS_tsne.csv
-UVM	tsne	mRNA expression t-SNE from the pancanatlas uveal melanoma cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UVM_tsne.csv
+GBM	tsne	mRNA expression t-SNE from the pancanatlas GBM cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/GBM_tsne.csv
+ACC	tsne	mRNA expression t-SNE from the pancanatlas ACC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/ACC_tsne.csv
+BLCA	tsne	mRNA expression t-SNE from the pancanatlas BLCA cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/BLCA_tsne.csv
+BRCA	tsne	mRNA expression t-SNE from the pancanatlas BRCA cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/BRCA_tsne.csv
+CESC	tsne	mRNA expression t-SNE from the pancanatlas CESC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/CESC_tsne.csv
+CHOL	tsne	mRNA expression t-SNE from the pancanatlas CHOL cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/CHOL_tsne.csv
+COAD	tsne	mRNA expression t-SNE from the pancanatlas COAD cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/COAD_tsne.csv
+DLBC	tsne	mRNA expression t-SNE from the pancanatlas DLBC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/DLBC_tsne.csv
+ESCA	tsne	mRNA expression t-SNE from the pancanatlas ESCA cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/ESCA_tsne.csv
+HNSC	tsne	mRNA expression t-SNE from the pancanatlas HNSC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/HNSC_tsne.csv
+KICH	tsne	mRNA expression t-SNE from the pancanatlas KICH cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KICH_tsne.csv
+KIRC	tsne	mRNA expression t-SNE from the pancanatlas KIRC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRC_tsne.csv
+KIRP	tsne	mRNA expression t-SNE from the pancanatlas KIRP cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRP_tsne.csv
+LAML	tsne	mRNA expression t-SNE from the pancanatlas LAML cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LAML_tsne.csv
+LGG	tsne	mRNA expression t-SNE from the pancanatlas LGG cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LGG_tsne.csv
+LIHC	tsne	mRNA expression t-SNE from the pancanatlas LIHC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LIHC_tsne.csv
+LUAD	tsne	mRNA expression t-SNE from the pancanatlas LUAD cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LUAD_tsne.csv
+LUSC	tsne	mRNA expression t-SNE from the pancanatlas LUSC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/LUSC_tsne.csv
+MESO	tsne	mRNA expression t-SNE from the pancanatlas MESO cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/MESO_tsne.csv
+OV	tsne	mRNA expression t-SNE from the pancanatlas OV cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/OV_tsne.csv
+PAAD	tsne	mRNA expression t-SNE from the pancanatlas PAAD cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PAAD_tsne.csv
+PCPG	tsne	mRNA expression t-SNE from the pancanatlas PCPG cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PCPG_tsne.csv
+PRAD	tsne	mRNA expression t-SNE from the pancanatlas PRAD cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/PRAD_tsne.csv
+READ	tsne	mRNA expression t-SNE from the pancanatlas READ cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/READ_tsne.csv
+SARC	tsne	mRNA expression t-SNE from the pancanatlas SARC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/SARC_tsne.csv
+SKCM	tsne	mRNA expression t-SNE from the pancanatlas SKCM cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/SKCM_tsne.csv
+STAD	tsne	mRNA expression t-SNE from the pancanatlas STAD cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/STAD_tsne.csv
+TGCT	tsne	mRNA expression t-SNE from the pancanatlas TGCT cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/TGCT_tsne.csv
+THCA	tsne	mRNA expression t-SNE from the pancanatlas THCA cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/THCA_tsne.csv
+THYM	tsne	mRNA expression t-SNE from the pancanatlas THYM cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/THYM_tsne.csv
+UCEC	tsne	mRNA expression t-SNE from the pancanatlas UCEC cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UCEC_tsne.csv
+UCS	tsne	mRNA expression t-SNE from the pancanatlas UCS cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UCS_tsne.csv
+UVM	tsne	mRNA expression t-SNE from the pancanatlas UVM cohort	https://raw.githubusercontent.com/selkamand/express_precompute/main/UVM_tsne.csv
