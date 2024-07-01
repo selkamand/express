@@ -4,6 +4,7 @@
 #' This function lists all available datasets for use with the `express` package.
 #' It reads a predefined TSV file containing dataset information and returns it as a data frame.
 #'
+#' @param url show the URL from which the data will be pulled
 #' @return A data frame containing the available datasets. The data frame includes columns such as name, type, url, and description.
 #' @export
 #'
@@ -11,13 +12,18 @@
 #' # List all available datasets
 #' datasets <- express_available_datasets()
 #' print(datasets)
-express_available_datasets <- function(){
+express_available_datasets <- function(url=FALSE){
   path_datasets <- system.file("public_tsne_datasets.tsv", package = "express")
-  read.csv(file = path_datasets, header = TRUE, sep = "\t")
+  df <- read.csv(file = path_datasets, header = TRUE, sep = "\t")
+
+  if(!url){
+    df <- df[, colnames(df) != "url"]
+  }
+  return(df)
 }
 
 
-#' Express Precomputed t-SNE Plot
+#' Fetch and Plot Precomputed Dataset
 #'
 #' This function retrieves and visualizes precomputed t-SNE data from a specified dataset.
 #' It fetches the data from a URL associated with the dataset name provided, and then either
@@ -26,22 +32,27 @@ express_available_datasets <- function(){
 #' @param dataset A string specifying the name of the dataset to be retrieved. The dataset must be one of the available datasets listed by `express_available_datasets()`.
 #' @param interactive A logical value indicating whether the plot should be interactive. Currently, this parameter is not used in the function.
 #' @param just_return_data A logical value indicating whether to return only the dataset without generating a plot. Defaults to FALSE.
+#' @param datatype A string indicating whether to retrieve \strong{expression} or \strong{methylation} data
 #' @return If `just_return_data` is TRUE, a data.table containing the dataset is returned. If `just_return_data` is FALSE and the dataset type is "tsne", a ggplot2 object representing the t-SNE plot is returned. If the dataset type is not "tsne", an error is raised.
 #' @export
 #'
 #' @examples
-#' # Retrieve and plot the t-SNE data
-#' express_precomputed_tsne("example_dataset")
+#' # Retrieve and plot the
+#' express_precomputed("GBM")
 #'
-#' # Retrieve only the t-SNE data without plotting
-#' data <- express_precomputed_tsne("example_dataset", just_return_data = TRUE)
-express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_data = FALSE, title = paste0(dataset, " t-SNE (expression)")){
+#' # Retrieve only the data without plotting
+#' data <- express_precomputed_tsne("GBM", just_return_data = TRUE)
+express_precomputed <- function(dataset, datatype = c("expression", "methylation"), interactive = FALSE, just_return_data = FALSE, title = "auto"){
+
+  datatype <- rlang::arg_match(datatype)
 
   # Assertions
   assertions::assert_string(dataset)
 
   # Check if its in the available dataset
-  available_datasets <- express_available_datasets()
+  available_datasets <- express_available_datasets(url = TRUE)
+  available_datasets <- available_datasets[c(available_datasets[["datatype"]] == datatype),]
+
   assertions::assert_subset(
     dataset, available_datasets[["name"]],
     msg = "Dataset not found. Please run {.code express_available_datasets()} to list available datasets:"
@@ -52,11 +63,15 @@ express_precomputed_tsne <- function(dataset, interactive = FALSE, just_return_d
   #type = available_datasets[["type"]][index]
   url = available_datasets[["url"]][index]
   description = available_datasets[["description"]][index]
+  method = available_datasets[["method"]][index]
 
   data <- read_from_url(url)
 
   if(just_return_data) { return(data) }
 
+  if(title == "auto"){
+    title = paste0(dataset, " ", method, " (", datatype, ")")
+  }
 
   gg <- ggplot2::ggplot(data, ggplot2::aes(x=Dim1, y = Dim2)) +
     ggiraph::geom_point_interactive(ggplot2::aes(data_id = Sample, tooltip = Sample)) +

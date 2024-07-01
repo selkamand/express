@@ -80,9 +80,9 @@ express can also visualise the results from precomputed analyses hosted on GitHu
 
 For example to see a t-SNE of TCGA BRCA
 
-```{r}
+```{r, fig.height=5, fig.width=7}
 library(express)
-express_precomputed_tsne("BRCA")
+express_precomputed("BRCA", datatype = "expression")
 ```
 
 
