@@ -75,7 +75,7 @@ For example to see a t-SNE of TCGA BRCA
 
 ``` r
 library(express)
-express_precomputed_tsne("BRCA")
+express_precomputed("BRCA", datatype = "expression")
 ```
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
@@ -84,72 +84,74 @@ To see all precomputed datasets available
 
 ``` r
 express_available_datasets()
-#>    name type                                            description
-#> 1   GBM tsne  mRNA expression t-SNE from the pancanatlas GBM cohort
-#> 2   ACC tsne  mRNA expression t-SNE from the pancanatlas ACC cohort
-#> 3  BLCA tsne mRNA expression t-SNE from the pancanatlas BLCA cohort
-#> 4  BRCA tsne mRNA expression t-SNE from the pancanatlas BRCA cohort
-#> 5  CESC tsne mRNA expression t-SNE from the pancanatlas CESC cohort
-#> 6  CHOL tsne mRNA expression t-SNE from the pancanatlas CHOL cohort
-#> 7  COAD tsne mRNA expression t-SNE from the pancanatlas COAD cohort
-#> 8  DLBC tsne mRNA expression t-SNE from the pancanatlas DLBC cohort
-#> 9  ESCA tsne mRNA expression t-SNE from the pancanatlas ESCA cohort
-#> 10 HNSC tsne mRNA expression t-SNE from the pancanatlas HNSC cohort
-#> 11 KICH tsne mRNA expression t-SNE from the pancanatlas KICH cohort
-#> 12 KIRC tsne mRNA expression t-SNE from the pancanatlas KIRC cohort
-#> 13 KIRP tsne mRNA expression t-SNE from the pancanatlas KIRP cohort
-#> 14 LAML tsne mRNA expression t-SNE from the pancanatlas LAML cohort
-#> 15  LGG tsne  mRNA expression t-SNE from the pancanatlas LGG cohort
-#> 16 LIHC tsne mRNA expression t-SNE from the pancanatlas LIHC cohort
-#> 17 LUAD tsne mRNA expression t-SNE from the pancanatlas LUAD cohort
-#> 18 LUSC tsne mRNA expression t-SNE from the pancanatlas LUSC cohort
-#> 19 MESO tsne mRNA expression t-SNE from the pancanatlas MESO cohort
-#> 20   OV tsne   mRNA expression t-SNE from the pancanatlas OV cohort
-#> 21 PAAD tsne mRNA expression t-SNE from the pancanatlas PAAD cohort
-#> 22 PCPG tsne mRNA expression t-SNE from the pancanatlas PCPG cohort
-#> 23 PRAD tsne mRNA expression t-SNE from the pancanatlas PRAD cohort
-#> 24 READ tsne mRNA expression t-SNE from the pancanatlas READ cohort
-#> 25 SARC tsne mRNA expression t-SNE from the pancanatlas SARC cohort
-#> 26 SKCM tsne mRNA expression t-SNE from the pancanatlas SKCM cohort
-#> 27 STAD tsne mRNA expression t-SNE from the pancanatlas STAD cohort
-#> 28 TGCT tsne mRNA expression t-SNE from the pancanatlas TGCT cohort
-#> 29 THCA tsne mRNA expression t-SNE from the pancanatlas THCA cohort
-#> 30 THYM tsne mRNA expression t-SNE from the pancanatlas THYM cohort
-#> 31 UCEC tsne mRNA expression t-SNE from the pancanatlas UCEC cohort
-#> 32  UCS tsne  mRNA expression t-SNE from the pancanatlas UCS cohort
-#> 33  UVM tsne  mRNA expression t-SNE from the pancanatlas UVM cohort
-#>                                                                                  url
-#> 1   https://raw.githubusercontent.com/selkamand/express_precompute/main/GBM_tsne.csv
-#> 2   https://raw.githubusercontent.com/selkamand/express_precompute/main/ACC_tsne.csv
-#> 3  https://raw.githubusercontent.com/selkamand/express_precompute/main/BLCA_tsne.csv
-#> 4  https://raw.githubusercontent.com/selkamand/express_precompute/main/BRCA_tsne.csv
-#> 5  https://raw.githubusercontent.com/selkamand/express_precompute/main/CESC_tsne.csv
-#> 6  https://raw.githubusercontent.com/selkamand/express_precompute/main/CHOL_tsne.csv
-#> 7  https://raw.githubusercontent.com/selkamand/express_precompute/main/COAD_tsne.csv
-#> 8  https://raw.githubusercontent.com/selkamand/express_precompute/main/DLBC_tsne.csv
-#> 9  https://raw.githubusercontent.com/selkamand/express_precompute/main/ESCA_tsne.csv
-#> 10 https://raw.githubusercontent.com/selkamand/express_precompute/main/HNSC_tsne.csv
-#> 11 https://raw.githubusercontent.com/selkamand/express_precompute/main/KICH_tsne.csv
-#> 12 https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRC_tsne.csv
-#> 13 https://raw.githubusercontent.com/selkamand/express_precompute/main/KIRP_tsne.csv
-#> 14 https://raw.githubusercontent.com/selkamand/express_precompute/main/LAML_tsne.csv
-#> 15  https://raw.githubusercontent.com/selkamand/express_precompute/main/LGG_tsne.csv
-#> 16 https://raw.githubusercontent.com/selkamand/express_precompute/main/LIHC_tsne.csv
-#> 17 https://raw.githubusercontent.com/selkamand/express_precompute/main/LUAD_tsne.csv
-#> 18 https://raw.githubusercontent.com/selkamand/express_precompute/main/LUSC_tsne.csv
-#> 19 https://raw.githubusercontent.com/selkamand/express_precompute/main/MESO_tsne.csv
-#> 20   https://raw.githubusercontent.com/selkamand/express_precompute/main/OV_tsne.csv
-#> 21 https://raw.githubusercontent.com/selkamand/express_precompute/main/PAAD_tsne.csv
-#> 22 https://raw.githubusercontent.com/selkamand/express_precompute/main/PCPG_tsne.csv
-#> 23 https://raw.githubusercontent.com/selkamand/express_precompute/main/PRAD_tsne.csv
-#> 24 https://raw.githubusercontent.com/selkamand/express_precompute/main/READ_tsne.csv
-#> 25 https://raw.githubusercontent.com/selkamand/express_precompute/main/SARC_tsne.csv
-#> 26 https://raw.githubusercontent.com/selkamand/express_precompute/main/SKCM_tsne.csv
-#> 27 https://raw.githubusercontent.com/selkamand/express_precompute/main/STAD_tsne.csv
-#> 28 https://raw.githubusercontent.com/selkamand/express_precompute/main/TGCT_tsne.csv
-#> 29 https://raw.githubusercontent.com/selkamand/express_precompute/main/THCA_tsne.csv
-#> 30 https://raw.githubusercontent.com/selkamand/express_precompute/main/THYM_tsne.csv
-#> 31 https://raw.githubusercontent.com/selkamand/express_precompute/main/UCEC_tsne.csv
-#> 32  https://raw.githubusercontent.com/selkamand/express_precompute/main/UCS_tsne.csv
-#> 33  https://raw.githubusercontent.com/selkamand/express_precompute/main/UVM_tsne.csv
+#>    name method    datatype
+#> 1   GBM   tsne  expression
+#> 2   ACC   tsne  expression
+#> 3  BLCA   tsne  expression
+#> 4  BRCA   tsne  expression
+#> 5  CESC   tsne  expression
+#> 6  CHOL   tsne  expression
+#> 7  COAD   tsne  expression
+#> 8  DLBC   tsne  expression
+#> 9  ESCA   tsne  expression
+#> 10 HNSC   tsne  expression
+#> 11 KICH   tsne  expression
+#> 12 KIRC   tsne  expression
+#> 13 KIRP   tsne  expression
+#> 14 LAML   tsne  expression
+#> 15  LGG   tsne  expression
+#> 16 LIHC   tsne  expression
+#> 17 LUAD   tsne  expression
+#> 18 LUSC   tsne  expression
+#> 19 MESO   tsne  expression
+#> 20   OV   tsne  expression
+#> 21 PAAD   tsne  expression
+#> 22 PCPG   tsne  expression
+#> 23 PRAD   tsne  expression
+#> 24 READ   tsne  expression
+#> 25 SARC   tsne  expression
+#> 26 SKCM   tsne  expression
+#> 27 STAD   tsne  expression
+#> 28 TGCT   tsne  expression
+#> 29 THCA   tsne  expression
+#> 30 THYM   tsne  expression
+#> 31 UCEC   tsne  expression
+#> 32  UCS   tsne  expression
+#> 33  UVM   tsne  expression
+#> 34 BRCA   umap methylation
+#>                                                description
+#> 1    mRNA expression t-SNE from the pancanatlas GBM cohort
+#> 2    mRNA expression t-SNE from the pancanatlas ACC cohort
+#> 3   mRNA expression t-SNE from the pancanatlas BLCA cohort
+#> 4   mRNA expression t-SNE from the pancanatlas BRCA cohort
+#> 5   mRNA expression t-SNE from the pancanatlas CESC cohort
+#> 6   mRNA expression t-SNE from the pancanatlas CHOL cohort
+#> 7   mRNA expression t-SNE from the pancanatlas COAD cohort
+#> 8   mRNA expression t-SNE from the pancanatlas DLBC cohort
+#> 9   mRNA expression t-SNE from the pancanatlas ESCA cohort
+#> 10  mRNA expression t-SNE from the pancanatlas HNSC cohort
+#> 11  mRNA expression t-SNE from the pancanatlas KICH cohort
+#> 12  mRNA expression t-SNE from the pancanatlas KIRC cohort
+#> 13  mRNA expression t-SNE from the pancanatlas KIRP cohort
+#> 14  mRNA expression t-SNE from the pancanatlas LAML cohort
+#> 15   mRNA expression t-SNE from the pancanatlas LGG cohort
+#> 16  mRNA expression t-SNE from the pancanatlas LIHC cohort
+#> 17  mRNA expression t-SNE from the pancanatlas LUAD cohort
+#> 18  mRNA expression t-SNE from the pancanatlas LUSC cohort
+#> 19  mRNA expression t-SNE from the pancanatlas MESO cohort
+#> 20    mRNA expression t-SNE from the pancanatlas OV cohort
+#> 21  mRNA expression t-SNE from the pancanatlas PAAD cohort
+#> 22  mRNA expression t-SNE from the pancanatlas PCPG cohort
+#> 23  mRNA expression t-SNE from the pancanatlas PRAD cohort
+#> 24  mRNA expression t-SNE from the pancanatlas READ cohort
+#> 25  mRNA expression t-SNE from the pancanatlas SARC cohort
+#> 26  mRNA expression t-SNE from the pancanatlas SKCM cohort
+#> 27  mRNA expression t-SNE from the pancanatlas STAD cohort
+#> 28  mRNA expression t-SNE from the pancanatlas TGCT cohort
+#> 29  mRNA expression t-SNE from the pancanatlas THCA cohort
+#> 30  mRNA expression t-SNE from the pancanatlas THYM cohort
+#> 31  mRNA expression t-SNE from the pancanatlas UCEC cohort
+#> 32   mRNA expression t-SNE from the pancanatlas UCS cohort
+#> 33   mRNA expression t-SNE from the pancanatlas UVM cohort
+#> 34 450K methylation array umap from pan-cancer BRCA cohort
 ```
