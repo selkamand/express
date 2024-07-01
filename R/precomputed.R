@@ -33,6 +33,7 @@ express_available_datasets <- function(url=FALSE){
 #' @param interactive A logical value indicating whether the plot should be interactive. Currently, this parameter is not used in the function.
 #' @param just_return_data A logical value indicating whether to return only the dataset without generating a plot. Defaults to FALSE.
 #' @param datatype A string indicating whether to retrieve \strong{expression} or \strong{methylation} data
+#' @param show_axis_titles A boolean indicating whether to show axis titles
 #' @return If `just_return_data` is TRUE, a data.table containing the dataset is returned. If `just_return_data` is FALSE and the dataset type is "tsne", a ggplot2 object representing the t-SNE plot is returned. If the dataset type is not "tsne", an error is raised.
 #' @export
 #'
@@ -42,7 +43,7 @@ express_available_datasets <- function(url=FALSE){
 #'
 #' # Retrieve only the data without plotting
 #' data <- express_precomputed_tsne("GBM", just_return_data = TRUE)
-express_precomputed <- function(dataset, datatype = c("expression", "methylation"), interactive = FALSE, just_return_data = FALSE, title = "auto"){
+express_precomputed <- function(dataset, datatype = c("expression", "methylation"), interactive = FALSE, just_return_data = FALSE, title = "auto", show_axis_titles = FALSE){
 
   datatype <- rlang::arg_match(datatype)
 
@@ -86,6 +87,9 @@ express_precomputed <- function(dataset, datatype = c("expression", "methylation
       plot.title = ggplot2::element_text(hjust = 0.5, face = "bold")
       )
 
+  if(!show_axis_titles){
+    gg <- gg + ggplot2::theme(axis.title = ggplot2::element_blank())
+  }
     if (interactive) {
       stop("tsne interactivity is not yet implemented")
     }

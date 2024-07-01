@@ -9,7 +9,8 @@ express_precomputed(
   datatype = c("expression", "methylation"),
   interactive = FALSE,
   just_return_data = FALSE,
-  title = "auto"
+  title = "auto",
+  show_axis_titles = FALSE
 )
 }
 \arguments{
@@ -20,6 +21,8 @@ express_precomputed(
 \item{interactive}{A logical value indicating whether the plot should be interactive. Currently, this parameter is not used in the function.}
 
 \item{just_return_data}{A logical value indicating whether to return only the dataset without generating a plot. Defaults to FALSE.}
+
+\item{show_axis_titles}{A boolean indicating whether to show axis titles}
 }
 \value{
 If \code{just_return_data} is TRUE, a data.table containing the dataset is returned. If \code{just_return_data} is FALSE and the dataset type is "tsne", a ggplot2 object representing the t-SNE plot is returned. If the dataset type is not "tsne", an error is raised.
