@@ -85,40 +85,40 @@ To see all precomputed datasets available
 ``` r
 express_available_datasets()
 #>    name method    datatype
-#> 1   GBM   tsne  expression
-#> 2   ACC   tsne  expression
-#> 3  BLCA   tsne  expression
-#> 4  BRCA   tsne  expression
-#> 5  CESC   tsne  expression
-#> 6  CHOL   tsne  expression
-#> 7  COAD   tsne  expression
-#> 8  DLBC   tsne  expression
-#> 9  ESCA   tsne  expression
-#> 10 HNSC   tsne  expression
-#> 11 KICH   tsne  expression
-#> 12 KIRC   tsne  expression
-#> 13 KIRP   tsne  expression
-#> 14 LAML   tsne  expression
-#> 15  LGG   tsne  expression
-#> 16 LIHC   tsne  expression
-#> 17 LUAD   tsne  expression
-#> 18 LUSC   tsne  expression
-#> 19 MESO   tsne  expression
-#> 20   OV   tsne  expression
-#> 21 PAAD   tsne  expression
-#> 22 PCPG   tsne  expression
-#> 23 PRAD   tsne  expression
-#> 24 READ   tsne  expression
-#> 25 SARC   tsne  expression
-#> 26 SKCM   tsne  expression
-#> 27 STAD   tsne  expression
-#> 28 TGCT   tsne  expression
-#> 29 THCA   tsne  expression
-#> 30 THYM   tsne  expression
-#> 31 UCEC   tsne  expression
-#> 32  UCS   tsne  expression
-#> 33  UVM   tsne  expression
-#> 34 BRCA   umap methylation
+#> 1   GBM  t-SNE  expression
+#> 2   ACC  t-SNE  expression
+#> 3  BLCA  t-SNE  expression
+#> 4  BRCA  t-SNE  expression
+#> 5  CESC  t-SNE  expression
+#> 6  CHOL  t-SNE  expression
+#> 7  COAD  t-SNE  expression
+#> 8  DLBC  t-SNE  expression
+#> 9  ESCA  t-SNE  expression
+#> 10 HNSC  t-SNE  expression
+#> 11 KICH  t-SNE  expression
+#> 12 KIRC  t-SNE  expression
+#> 13 KIRP  t-SNE  expression
+#> 14 LAML  t-SNE  expression
+#> 15  LGG  t-SNE  expression
+#> 16 LIHC  t-SNE  expression
+#> 17 LUAD  t-SNE  expression
+#> 18 LUSC  t-SNE  expression
+#> 19 MESO  t-SNE  expression
+#> 20   OV  t-SNE  expression
+#> 21 PAAD  t-SNE  expression
+#> 22 PCPG  t-SNE  expression
+#> 23 PRAD  t-SNE  expression
+#> 24 READ  t-SNE  expression
+#> 25 SARC  t-SNE  expression
+#> 26 SKCM  t-SNE  expression
+#> 27 STAD  t-SNE  expression
+#> 28 TGCT  t-SNE  expression
+#> 29 THCA  t-SNE  expression
+#> 30 THYM  t-SNE  expression
+#> 31 UCEC  t-SNE  expression
+#> 32  UCS  t-SNE  expression
+#> 33  UVM  t-SNE  expression
+#> 34 BRCA   UMAP methylation
 #>                                                description
 #> 1    mRNA expression t-SNE from the pancanatlas GBM cohort
 #> 2    mRNA expression t-SNE from the pancanatlas ACC cohort
